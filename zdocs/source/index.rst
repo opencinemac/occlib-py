@@ -1,18 +1,18 @@
-.. islelib documentation master file, created by
+.. occlib documentation master file, created by
    sphinx-quickstart on Mon Oct  1 00:18:03 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-islelib-py
-==========
+occlib-py
+=========
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-``islelib`` is Illuscio's python library template. To build your own documentation,
-simply start using it. Below we will show some example documentation with the basic
-functions of this library template.
+``occlib`` is the Open Cinema Collective's python library template. To build your own
+documentation, simply start using it. Below we will show some example documentation with
+the basic functions of this library template.
 
 Table of Contents
 =================
@@ -28,13 +28,13 @@ Table of Contents
 Basic Usage
 ===========
 
-   >>> import islelib
+   >>> import occlib
    [basic useage example goes here]
 
 Islelib comes with a number of pre-built quality-of-life macros for developers so they
 can code more and manage less, most of which are accessed through ``make`` commands.
 
-In addition to your lib's package folder, islelib has two other main directories:
+In addition to your lib's package folder, occlib has two other main directories:
 
    * ``./zdocs`` - where docs are built to and stored
    * ``./zdevelop`` - where tests, maintenance scripts, and other information is stored
@@ -53,25 +53,22 @@ Setting up your Library
 
 Getting started is easy, just follow the below steps. Many of these steps include
 ``Make`` scripts that help you get up and running quickly. To run the ``Make`` commands,
-ensure that the active directory of your terminal session is ``"islelib-py"``
+ensure that the active directory of your terminal session is ``"occlib-py"``
 
-1. Clone islelib-py from Github
+1. Clone occlib-py from Github
 --------------------------------
 
 navigate to where you wish to keep your project in terminal: ::
 
    >>> cd /path/to/local_repository
-   >>> git clone git@github.com:bpeake-illuscio/islelib-py.git
+   >>> git clone https://github.com/opencinemac/occlib-py.git temp
 
 once the library is cloned, move into it as your active directory: ::
 
-    >>> cd islelib-py
+    >>> cd temp
 
 2. Pick a Name
 --------------
-
-Illuscio uses the ''isle'' prefix convention (phonetically sounds like I-L/"Aye-EL" as
-opposed to "ill". Examples include ``isle_type``, ``isle_collections``, etc.
 
 When you have chosen a name for your new lib, simply type: ::
 
@@ -84,15 +81,14 @@ When you have chosen a name for your new lib, simply type: ::
    * change the name of any packages with an __init__ to ``libname`` (uses a find and replace from the old name when applicable).
    * change all of the relevant setup.cfg options to ``libname``
    * change the top level folder to ``libname-py``
-   * remove old ``islelib.egg`` folder
+   * remove old ``occlib.egg`` folder
 
 3. Pick a Description
 ---------------------
 
 In the ``./setup.cfg`` file, under the ``[metadata]`` header, change the ``description``
 field to a brief description of your project. This is the description that will appear
-on builds in Illuscio's `Python Azure Artifacts Feed`_ (pypi package repository).
-This description can be changed at any time.
+on PyPi.
 
 4. Create a Virtual Environment
 --------------------------------
@@ -133,7 +129,7 @@ typing: ::
 5. Install the Dev Environment
 ------------------------------
 
-islelib already comes pre-built with all the options and tools needed to write a generic
+occlib already comes pre-built with all the options and tools needed to write a generic
 library. To install these tools into a python environment, type: ::
 
    >>> make install-dev
@@ -162,7 +158,7 @@ your own libraries. A guide for how to do that can be found here:
 ------------------------
 
 Please reference the relevant documentation for registering your library in Github,
-Readthedocs, Azure Pipelines, etc. Links to relevant guides can be found below:
+Azure Pipelines, etc. Links to relevant guides can be found below:
 
 [Guides need to be written]
 
@@ -174,7 +170,7 @@ Writing Your Library
 1. Style
 --------
 
-Illuscio's style guide is simple and straightforward:
+The Open Cinema Collective's style guide is simple and straightforward:
 
    1. `Black`_ and `type hints`_ first
    2. `pep8`_ second
@@ -193,8 +189,8 @@ From `Black's`_ documentation: ::
    transparent after a while and you can focus on the content instead.
 
 Black sits at the top of the hierarchy. For instance, black suggests line lengths do not
-exceed 88 characters, where the default pep8 recommendation is 79. Illuscio code should
-conform to the Black preference of 88 characters.
+exceed 88 characters, where the default pep8 recommendation is 79. Open Cinema
+Collective code should conform to the Black preference of 88 characters.
 
 2. Lint
 -------
@@ -222,7 +218,7 @@ be kept from deploying to production.
 ------------
 
 Strict pep8 and Black adherence, while useful in many ways to the organization, can be
-annoying and distracting to individual engineers. To help with this, the islelib
+annoying and distracting to individual engineers. To help with this, the occlib
 template comes with tools to re-format your code for you.
 
 To re-format your code, type: ::
@@ -253,9 +249,9 @@ browser once the tests complete:
    * results: ``zdevelop/tests/_reports/test_results.html``
    * coverage: ``zdevelop/tests/_reports/coverage/index.html``
 
-Illuscio requires >= 85% code coverage in all files to publish a library. Libraries
-with less than 85% coverage in any given file will be kicked back or will need to have
-an exception granted.
+The Open Cinema Collective requires >= 85% code coverage in all files to publish a
+library. Libraries with less than 85% coverage in any given file will be kicked back or
+will need to have an exception granted.
 
 Likewise, code will be tested upon deployment and kicked back in the case of failures.
 The brief example tests in this library includes a failed test.
@@ -263,13 +259,13 @@ The brief example tests in this library includes a failed test.
 5. Document
 -----------
 
-islelib uses `Sphinx`_ to create it's documentation. To build docs for your new library,
+occlib uses `Sphinx`_ to create it's documentation. To build docs for your new library,
 type: ::
 
    >>> make doc
 
 Docs will be generated at ``./zdocs/_build/index.html``. This command will also open
-the newly created documentation in your default browser. islelib takes advantage of a
+the newly created documentation in your default browser. occlib takes advantage of a
 few specific sphinx plugins to:
 
    * automatically annotate types - types DO NOT need to be written in docstring to generate type annotations.
@@ -317,7 +313,7 @@ will:
 4. Build:
 ---------
 
-islelib uses `Azure Pipelines`_ to automatically run builds.
+occlib uses `Azure Pipelines`_ to automatically run builds.
 
 For more information on azure builds, see the `azure build templates repo`_.
 
