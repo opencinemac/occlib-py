@@ -1,4 +1,4 @@
-from islelib import __version__
+from occlib import __version__
 
 
 def test_example(example_fixture: int) -> None:
