@@ -29,7 +29,6 @@ Basic Usage
 ===========
 
    >>> import occlib
-   [basic useage example goes here]
 
 Islelib comes with a number of pre-built quality-of-life macros for developers so they
 can code more and manage less, most of which are accessed through ``make`` commands.
@@ -58,21 +57,30 @@ ensure that the active directory of your terminal session is ``"occlib-py"``
 1. Clone occlib-py from Github
 --------------------------------
 
-navigate to where you wish to keep your project in terminal: ::
+navigate to where you wish to keep your project in terminal:
 
-   >>> cd /path/to/local_repository
-   >>> git clone https://github.com/opencinemac/occlib-py.git temp
+.. code-block:: shell
 
-once the library is cloned, move into it as your active directory: ::
+   cd /path/to/local_repository
+   git clone https://github.com/opencinemac/occlib-py.git temp
 
-    >>> cd temp
+once the library is cloned, move into it as your active directory:
+
+.. code-block:: shell
+
+    cd temp
 
 2. Pick a Name
 --------------
 
-When you have chosen a name for your new lib, simply type: ::
+When you have chosen a name for your new lib, simply type:
 
-   >>> make name n=libname
+.. code-block:: shell
+
+   make name n=libname
+
+Output: ::
+
    library renamed! to switch your current directory, use the following	command:
    cd '/path/to/libname-py'
 
@@ -93,46 +101,61 @@ on PyPi.
 4. Create a Virtual Environment
 --------------------------------
 
-To set up a virtual enviroment through virtualenv, type: ::
+To set up a virtual enviroment through virtualenv, type:
 
-   >>> make venv
+.. code-block:: shell
+
+   make venv
 
 This will install a new virtual enviroment at ``~/venvs/[libname]-py-[## python version]``.
 
 Example name: ``libname-py-37``
 
 By default, this command uses your current "python3" alias, but a different version
-can be supplied with a `py=` option: ::
+can be supplied with a `py=` option:
 
-   >>> make venv py="/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
+.. code-block:: shell
+
+   make venv py="/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
+
+Output: ::
+
    venv created! To enter virtual env, run :
    . ~/.bash_profile
    then run:
    env_libname-37
 
 ``make venv`` also registers the enviroment and library directory to your ~/.bash_profile.
-This allows you to easily enter a development enviroment in terminal by typing: ::
+This allows you to easily enter a development enviroment in terminal by typing:
 
-   >>> env_libname-37
+.. code-block:: shell
+
+   env_libname-37
 
 ... where `libname` is the name of your lib and `37` is the python version of the venv.
-This command is equivalent to: ::
+This command is equivalent to:
 
-   >>> cd /path/to/libname-py
-   >>> source ~/venvs/libname-py-37/bin/activate
+.. code-block:: shell
+
+   cd /path/to/libname-py
+   source ~/venvs/libname-py-37/bin/activate
 
 In order to use the new alias, you will need to refresh your current terminal session by
-typing: ::
+typing:
 
-   >>> . ~/.bash_profile
+.. code-block:: shell
+
+   . ~/.bash_profile
 
 5. Install the Dev Environment
 ------------------------------
 
 occlib already comes pre-built with all the options and tools needed to write a generic
-library. To install these tools into a python environment, type: ::
+library. To install these tools into a python environment, type:
 
-   >>> make install-dev
+.. code-block:: shell
+
+   make install-dev
 
 These tools include automation for building, versioning, testing and docing your new
 library.
@@ -145,9 +168,11 @@ already installed.
 ----------------------------
 
 You should delete the existing ``.git`` folder for the repository, then initialize a
-clean repo by typing: ::
+clean repo by typing:
 
-   >>> git init
+.. code-block:: shell
+
+   git init
 
 In the future, you may wish to cherry-pick commits / updates to this template into
 your own libraries. A guide for how to do that can be found here:
@@ -195,9 +220,11 @@ Collective code should conform to the Black preference of 88 characters.
 2. Lint
 -------
 
-To check the formatting of your library, type: ::
+To check the formatting of your library, type:
 
-   >>> make lint
+.. code-block:: shell
+
+   make lint
 
 This will run the following tools to tell you where adjustments need to be made:
 
@@ -221,9 +248,11 @@ Strict pep8 and Black adherence, while useful in many ways to the organization, 
 annoying and distracting to individual engineers. To help with this, the occlib
 template comes with tools to re-format your code for you.
 
-To re-format your code, type: ::
+To re-format your code, type:
 
-   >>> make format
+.. code-block:: shell
+
+   make format
 
 This will run the following tools:
 
@@ -237,9 +266,11 @@ organization will lead to a more consistent, maintainable codebase.
 -------
 
 Tests are placed in ``zdevelop/tests``, and use the `pytest`_ library. To run your tests
-type: ::
+type:
 
-   >>> make test
+.. code-block:: shell
+
+   make test
 
 ... and watch the magic happen. This macro also creates coverage and error reports.
 Coverage reports show what percentage of each file's code is tested. These reports can
@@ -260,9 +291,11 @@ The brief example tests in this library includes a failed test.
 -----------
 
 occlib uses `Sphinx`_ to create it's documentation. To build docs for your new library,
-type: ::
+type:
 
-   >>> make doc
+.. code-block:: shell
+
+   make doc
 
 Docs will be generated at ``./zdocs/_build/index.html``. This command will also open
 the newly created documentation in your default browser. occlib takes advantage of a

@@ -34,7 +34,7 @@ test:
 .PHONY: lint
 lint:
 	-flake8
-	-black . --diff
+	-black . --check
 	-mypy .
 
 .PHONY: venv

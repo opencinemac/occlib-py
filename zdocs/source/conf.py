@@ -51,10 +51,9 @@ add_module_names = False
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.doctest",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.todo",
     "sphinx.ext.coverage",
     "sphinx.ext.viewcode",
+    "sphinx.ext.githubpages",
     "sphinx_autodoc_typehints",
 ]
 
@@ -123,20 +122,7 @@ htmlhelp_basename = "islelibdoc"
 
 # -- Options for LaTeX output ------------------------------------------------
 
-latex_elements: Dict[str, Any] = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
+latex_elements: Dict[str, Any] = {}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
