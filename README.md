@@ -13,7 +13,7 @@
     <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 </p>
 <p align="center">
-    <a href="https://github.com/opencinemac/occlib-py/"><img src="https://img.shields.io/pypi/pyversions/vtc" alt="Documentation"></a>
+    <a href="https://github.com/opencinemac/occlib-py/"><img src="https://img.shields.io/pypi/pyversions/occlib" alt="Documentation"></a>
     <a href="https://pypi.org/project/occlib/"><img src="https://badge.fury.io/py/occlib.svg" alt="PyPI version" height="18"></a>
     <a href="https://opencinemac.github.io/occlib-py/"><img src="https://img.shields.io/badge/docs-github.io-blue" alt="Documentation"></a>
 </p>
