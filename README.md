@@ -36,10 +36,6 @@ For full documentation:
 For library development guide, 
 [read the docs](https://opencinemac.github.io/occlib-py/).
 
-### Prerequisites
-
-Python 3.8+
-
 ## Authors
 
 * **Billy Peake** - *Initial work*
