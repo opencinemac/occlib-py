@@ -10,6 +10,7 @@
 </p>
 <p align="center">
     <a href="https://codeclimate.com/github/opencinemac/occlib-py/maintainability"><img src="https://api.codeclimate.com/v1/badges/705d052bebf3cdf1256a/maintainability" /></a>
+    <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 </p>
 <p align="center">
     <a href="https://github.com/opencinemac/occlib-py/"><img src="https://img.shields.io/pypi/pyversions/vtc" alt="Documentation"></a>
